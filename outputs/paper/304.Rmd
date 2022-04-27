@@ -1,13 +1,15 @@
 ---
-title: "how are people getting inflicted by COVID-19"
+title: "How are people getting inflicted by COVID-19"
 author: "Bradley Robert Wong"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   pdf_document: default
   bookdown::pdf_document2: default
-abstract: "For decades, the world has been through different financial crises and different events for example, housing crises, brexit vote etc. there have been a lot of events affecting the world's ecnomony and all these would be lead to affecting peoples salary income. to understand the living standards of the past, i used a linear regression to do an analysis on how the wages in 1985 was affected what affected them. \\par\\textbf{Keywords:} Wages, Age, Education, Gender, Linear Regression, Ethnicity"
+abstract: "For decades, the world has been through different financial crises and different events for example, housing crises, brexit vote etc. there have been a lot of events affecting the world's ecnomony and all these would be lead to affecting peoples salary income. to understand the living standards of the past, i used a linear regression to do an analysis on how the wages in 1985 was affected what affected them. \\par\\textbf{Keywords:} Wages, Age, Education, Gender, Linear Regression, Ethnicity \\par\\textbf{Link to github:} https://github.com/bradley2001/starter_folder"
+
 toc: yes
 bibliography: references.bib
+Link to github : https://github.com/bradley2001/starter_folder
 ---
 
 \newpage
@@ -31,7 +33,7 @@ citation("janitor")
 print(citation("tinytex"), bibtex=TRUE)
 citation("dplyr")
 citation("ggplot2")
-citation()
+citation("kableExtra")
 ```
 # 1 Introduction
 The Current Population Survey is a statistical survey that is jointly sponsored by the U.S. Bureau of Labor Statistics (BLS) and the U.S. Census Bureau (Census) on a monthly basis. It is the primary source for U.S. labor force statistics. The survey includes a representative sample of about 60,000 homes and focuses on those individuals who are 15 years and older to make an inferential assumption about the U.S. population as a whole.\
@@ -179,21 +181,19 @@ The second limitation would be the dataset only containing 2 numeric variable an
 
 One last limitation is that when we were plotting an age to wage and education to wage scatterplots, we realized that there were an exceptionally high outlier in the plot, in future investigations, we should look into it, understanding why such an observation has appeared. since we didnt have too many observation, we had to make sure the outlier wouldnt affect our model significantly.
 
-# Discussion
-Unsurprisingly, with more years of Education, people tend to have high amount of wages. this is very normal since more years of education meaning more learning and more knowledge, able to be proficient in a certain aspect of the field definitely brings more value of the company and hence will have a higher wage. This concept is the same as the person's age, if a person is older, the person has more experience. With more experience, they will have higher wages.
-
-We chose income as our topic because we believe income can represent a lot of things not only the individual but also the society. With higher average wages, it may mean better economy in the city and better living quality of individuals in the city
-
 # Enhancements
+There are several things we can add to the model, more variables can increases the context and use of the model.\ 
+One other thing to change is the surveys used to be done with phone calls and in person interviews. With technology nowadays, we can make the surveys online, not only making it more accessable but with circumstances like COVID-19, it reduces contact between people, making people more willing to answer the survey. It can also reduce a lot of labour force and time needed to walk through every singles homes. \
 
+# Discussion
+Unsurprisingly, with more years of Education, people tend to have high amount of wages. this is very normal since more years of education meaning more learning and more knowledge, able to be proficient in a certain aspect of the field definitely brings more value of the company and hence will have a higher wage. This concept is the same as the person's age, if a person is older, the person has more experience. With more experience, they will have higher wages.\
 
-
+We chose income as our topic because we believe income can represent a lot of things not only the individual but also the society. With higher average wages, it may mean better economy in the city and better living quality of individuals in the city.\
 
 # Ethics
 The survey didnt state whether it was a annoynymous survey or not. confidentiality wasnt included in the survey as well. respondents to the survey also isnt clearly stated that they were informed that information they give would be confidential or not. Even though except income, there werent any specifically private information collected but information to contact respondents should be collected in order to appropriately inform measures and uses of the respones they give will be used for.\
 
 Ethics standards should be assured involving any human activities especially sensitive information like income, person information etc... we should always make sure that appropriate annoucements are given to respondents to ensure their privacy is being well protected.\
-
 
 # Appendix
 ```{r, message=FALSE, echo=FALSE}
@@ -229,5 +229,5 @@ bibliography even if they weren't explicitly cited in the document.
 
 ---
 nocite: | 
-  @citeR, @tidyverse
+  @citeR, @tidyverse, @citeLahman, @citebroom, @citetidyverse, @citetidyr, @citedplyr, @citeggplot, @kable, @code 
 ...
