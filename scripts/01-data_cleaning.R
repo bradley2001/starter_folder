@@ -6,7 +6,6 @@
 # License: MIT
 
 #### Workspace setup ####
-```{r, echo=FALSE, include=FALSE, message=FALSE}
 
 library(readxl)
 library(tidyverse)
@@ -15,8 +14,7 @@ library(tinytex)
 library(car)
 
 
-```
-```{r, echo=FALSE, include=FALSE, message=FALSE}
+
 data_tran <- CPS1985 %>%
   mutate(wage_trans = log(wage),
          age_trans = log(age))
@@ -26,7 +24,7 @@ yhat3 <- fitted(model3)
 plot(yhat3,res3)
 plot(data_tran$age_trans,res3)
 plot(data_tran$education,res3)
-```
+
 #### What's next? ####
 
 
