@@ -1,34 +1,32 @@
 #### Preamble ####
-# Purpose: Clean the survey data downloaded from [...UPDATE ME!!!!!]
-# Author: Rohan Alexander [CHANGE THIS TO YOUR NAME!!!!]
-# Data: 3 January 2021
-# Contact: rohan.alexander@utoronto.ca [PROBABLY CHANGE THIS ALSO!!!!]
+# Purpose: Clean the data downloaded CPS1985
+# Author: Bradley Wong
+# Data:26 APRIL 2021
+# Contact: Bradleyrobert.wong@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: 
-# - Need to have downloaded the ACS data and saved it to inputs/data
-# - Don't forget to gitignore it!
-# - Change these to yours
-# Any other information needed?
-
 
 #### Workspace setup ####
-# Use R Projects, not setwd().
-library(haven)
+```{r, echo=FALSE, include=FALSE, message=FALSE}
+
+library(readxl)
 library(tidyverse)
-# Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv"
-                     )
-# Just keep some variables that may be of interest (change 
-# this depending on your interests)
-names(raw_data)
+library(janitor)
+library(tinytex)
+library(car)
 
-reduced_data <- 
-  raw_data %>% 
-  select(first_col, 
-         second_col)
-rm(raw_data)
-         
 
+```
+```{r, echo=FALSE, include=FALSE, message=FALSE}
+data_tran <- CPS1985 %>%
+  mutate(wage_trans = log(wage),
+         age_trans = log(age))
+model3 <- lm(data_tran$wage_trans ~ data_tran$age_trans + data_tran$education + data_tran$gender + data_tran$ethnicity)
+res3 <- rstandard(model3)
+yhat3 <- fitted(model3)
+plot(yhat3,res3)
+plot(data_tran$age_trans,res3)
+plot(data_tran$education,res3)
+```
 #### What's next? ####
 
 
