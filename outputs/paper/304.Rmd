@@ -6,7 +6,6 @@ output:
   pdf_document: default
   bookdown::pdf_document2: default
 abstract: "For decades, the world has been through different financial crises and different events for example, housing crises, brexit vote etc. there have been a lot of events affecting the world's ecnomony and all these would be lead to affecting peoples salary income. to understand the living standards of the past, i used a linear regression to do an analysis on how the wages in 1985 was affected what affected them. \\par\\textbf{Keywords:} Wages, Age, Education, Gender, Linear Regression, Ethnicity \\par\\textbf{Link to github:} https://github.com/bradley2001/starter_folder"
-
 toc: yes
 bibliography: references.bib
 Link to github : https://github.com/bradley2001/starter_folder
