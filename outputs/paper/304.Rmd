@@ -7,6 +7,7 @@ output:
   bookdown::pdf_document2: default
 abstract: "For decades, the world has been through different financial crises and different events for example, housing crises, brexit vote etc. there have been a lot of events affecting the world's ecnomony and all these would be lead to affecting peoples salary income. to understand the living standards of the past, i used a linear regression to do an analysis on how the wages in 1985 was affected what affected them. \\par\\textbf{Keywords:} Wages, Age, Education, Gender, Linear Regression, Ethnicity"
 toc: yes
+bibliography: references.bib
 ---
 
 \newpage
@@ -210,3 +211,23 @@ plot(CPS1985$education,res)
 ```
 
 # References
+
+<!--
+This manually sets the header for this unnumbered chapter.
+-->
+
+<!--
+To remove the indentation of the first entry.
+-->
+\noindent
+
+<!--
+This is just for testing with more citations for the bibliography at the end.  
+Add other entries into the list here if you'd like them to appear in the 
+bibliography even if they weren't explicitly cited in the document.
+-->
+
+---
+nocite: | 
+  @citeR, @tidyverse
+...
